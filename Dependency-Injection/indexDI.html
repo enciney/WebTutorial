@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <script src="angular.min.js"></script>
+    <script src="appJS.js"></script>
+
+    <title>HTML5 Custom Attributes</title>
+  </head>
+  <body ng-app="DependencyInjection">
+    <h1>HTML5 Custom Attributes</h1>
+
+    <div id="target" ng-controller="DIController">
+    <input type = "text "ng-blur="upper()" ng-model = "name"></input>
+    </div>
+
+  </body>
+</html>
