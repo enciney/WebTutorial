@@ -16,7 +16,14 @@
       original filter : {{saySmth()}}
       <br>
       custom filter : {{sayCustom()}}
-
+      <br>
+      <!--with pipe(|) we can call cutom filter without the filter word on the end
+          Also with the : sign specifies the filter's parameters as well -->
+      custom filter via arguments :{{sayCustom() | real : "bro" : "brother"}}
+      <br>
+      <!-- we can use the filter function with the another filter function as below -->
+      multiple filters via arguments :{{sayCustom() | real : "bro" : "brother" |uppercase}}
+      <br>
 <!-- lets try with the only src, you can see the error at the html console like that 404 not found imageType
  because of the we have a not certainly src value as in below,for avoid the 404 error we use the ng-src
  with this we say that our source is usaing with the angular functions and interpolate the placeholder at the time
