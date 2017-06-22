@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <script src="angular.min.js"></script>
+    <script src="appJS.js"></script>
+
+    <title>HTML5 Custom Attributes</title>
+  </head>
+  <body ng-app="ExpressionApp">
+    <h1>HTML5 Custom Attributes</h1>
+
+    <div id="target" ng-controller="ExpController">
+      <button ng-click="changePic();" name="button">get some {{buttonType}}</button>
+      <br>
+      original filter : {{saySmth()}}
+      <br>
+      custom filter : {{sayCustom()}}
+
+<!-- lets try with the only src, you can see the error at the html console like that 404 not found imageType
+ because of the we have a not certainly src value as in below,for avoid the 404 error we use the ng-src
+ with this we say that our source is usaing with the angular functions and interpolate the placeholder at the time
+-->
+     <img ng-src="exp_{{imageType}}.jpg"  width = 500>
+     <br>
+     <br>
+     Cost of the pic : {{cost|currency:"TL":5}}
+    </div>
+
+  </body>
+</html>
