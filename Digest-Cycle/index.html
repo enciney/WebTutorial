@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html >
+  <head>
+    <meta charset="utf-8">
+    <script src="angular.min.js"></script>
+    <script src="appJS.js"></script>
+
+    <title>Digest-Cycle Example</title>
+  </head>
+  <body ng-app="AngularApp">
+
+  <div ng-controller="CounterController">
+<button ng-click="showNumberOfWatchers()"> See Watchers</button>
+<br>
+<br>
+<button ng-click="countOnce()">up once counter </button>
+<br>
+<br>
+<button ng-click="Upcounter()">up once counter </button>
+<br>
+<input type="text" ng-model="name">
+<br>
+onceCounter : {{onceCounter}}
+<br>
+incremental counter : {{counter}}
+  </div>
+
+  </body>
+</html>
