@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html >
+  <head>
+    <meta charset="utf-8">
+    <script src="angular.min.js"></script>
+    <script src="appJS.js"></script>
+<style >body{font-size : 1.2em;}</style>
+    <title>Binding Example</title>
+  </head>
+  <body ng-app="AngularApp">
+
+  <div ng-controller="CounterController">
+<h1>1-way/2-way and 1-time binding Example</h1>
+<br>
+<button ng-click="displayWatcher()"># watchers </button>
+<button ng-click="logName()">name log </button>
+<button ng-click="logFullName()">full name log</button>
+<br>
+<br>
+<button ng-click="setFullname()">set Full Name</button><br>
+Full name : {{::fullName}}
+<br>
+<br>
+<input ng-model = " name">
+<br>
+  </div>
+
+  </body>
+</html>
