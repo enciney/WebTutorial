@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <script src="angular.min.js"></script>
+    <script src="this.js"></script>
+    <title>'this' keyword outside of object</title>
+  </head>
+  <body ng-app = 'isolatedScope'  ng-controller = 'controller as ctrl'>
+  <button ng-click = "ctrl.clickMessage(name)">Controller Button</button>
+
+   <directive age = "ctrl.clickMessage(smth)"  surname ="smth" name = "{{ctrl.name}}"></directive>
+      <br>
+
+  </body>
+</html>

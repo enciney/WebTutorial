@@ -1,0 +1,13 @@
+<!-- if bindToController  = true  we can use inherit. notation instead of the $scope   -->
+<!--  if false we had to disard  inherit.  because parents scope is valid now-->
+<h3>{{inherit.title}}</h3>
+<ol>
+  <li ng-repeat="item in inherit.items">
+    {{ item.quantity }} of {{ item.name }}
+    <!-- <button ng-click="list.removeItem($index);">Remove Item</button> -->
+  </li>
+</ol>
+
+<div class="error"  ng-if = "inherit.cookiesInList()">
+   WARNING
+</div>
