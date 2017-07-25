@@ -1,0 +1,54 @@
+<div ng-if = "myInfo.signUpCheck()">
+<h1>Your Information : </h1>
+
+<br> <br>
+<div class="">
+  <b>First Name : </b>  {{myInfo.user.firstname}}
+</div>
+
+<div class="">
+  <b>Last Name : </b>  {{myInfo.user.lastname}}
+</div>
+
+
+<div class="">
+  <b>Email : </b>  {{myInfo.user.email}}
+</div>
+
+<div class="">
+  <b>Phone : </b>  {{myInfo.user.phone}}
+</div>
+
+<div ng-if= "myInfo.checkItem()">
+  <b>Menu Item : </b>
+  <br>
+  <div class="menu-item-tile col-md-6">
+    <div class="row">
+      <div class="col-sm-5">
+        <div class="menu-item-photo">
+          <div>{{myInfo.useritem.short_name}}</div>
+          <img class="img-responsive" width="250" height="150" ng-src="{{myInfo.basePath}}/images/{{myInfo.useritem.short_name}}.jpg" alt="{{myInfo.useritem.name}}">
+        </div>
+        <div class="menu-item-price">{{myInfo.useritem.price_small | currency}}<span> {{myInfo.useritem.small_portion_name}}</span> {{myInfo.useritem.price_large | currency}} <span>{{myInfo.useritem.large_portion_name}}</span></div>
+      </div>
+      <div class="menu-item-description col-sm-7">
+        <h3 class="menu-item-title">{{myInfo.useritem.name}}</h3>
+        <p class="menu-item-details">{{myInfo.useritem.description}}</p>
+      </div>
+    </div>
+    <hr class="visible-xs">
+  </div>
+
+
+</div>
+
+<div ng-if= "!myInfo.checkItem()">
+    <b>No such menu number exists</b>
+</div>
+
+</div>
+
+
+<div ng-if = "!myInfo.signUpCheck()">
+  <a  ui-sref= "public.signup"> <p class="glyphicon glyphicon-info-sign"></p><br class="hidden-xs">Not Signed Up Yet. Sign up Now!</a>
+</div>
